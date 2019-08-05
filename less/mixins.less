@@ -3,3 +3,14 @@
 .borders() {
   border-radius: 10px;
 }
+
+.button(@bgcolor, @fgcolor, @size) {
+  height: @size;
+  background-color: @bgcolor;
+  .borders();
+  color: @fgcolor;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+  width: @size * 2.75;
+}
