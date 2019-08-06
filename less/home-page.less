@@ -5,7 +5,7 @@
   .intro {
 
     h2 {
-      padding: 15px;
+      .padding()
     }
 
     p {
@@ -48,7 +48,7 @@
   }
 
   .visit-planets {
-    padding: 15px;
+    .padding();
 
     h3 {
       margin-top: 11px;
@@ -68,6 +68,7 @@
 
     @media @phone {
       flex-direction: column;
+      padding: 50px 15px 20px 15px;
     }
 
     .walk-text {
@@ -92,8 +93,18 @@
       .btn {
         .button(@btn-bg-color, @border-real, 4rem);
 
+        @media @phone {
+          .button(@btn-bg-color, @border-real, 6rem);
+          width: 100%;
+        }
+
         &:hover {
           .button(@border-real, @btn-bg-color, 4rem);
+
+          @media @phone {
+            .button(@border-real, @btn-bg-color, 6rem);
+            width: 100%;
+          }
         }
       }
     }
