@@ -1,1 +1,24 @@
 // Mixins Here
+
+.borders() {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.padding() {
+  padding: 15px;
+}
+
+.button(@bgcolor, @fgcolor, @size) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: @size;
+  background-color: @bgcolor;
+  .borders();
+  color: @fgcolor;
+  font-size: 2rem;
+  padding: @size - 2rem auto;
+  text-align: center;
+  width: @size * 2.75;
+}
